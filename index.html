@@ -56,6 +56,16 @@
     ::selection { background: #1a56db33; }
     .hamburger-line { transition: all 0.3s; }
     .mobile-menu { transition: max-height 0.3s ease, opacity 0.3s ease; }
+    /* Wave dividers — extracted from source */
+    .divider { position: absolute; left: 0; right: 0; width: 100%; background-repeat-x: repeat; background-repeat-y: no-repeat; pointer-events: none; z-index: 1; }
+    .divider-top { top: 0; background-position: top; }
+    .divider-bottom { bottom: 0; background-position: bottom; }
+    .wave-hero-bottom { height: 45px; background-size: 100% 45px; background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSI0NXB4IiB2aWV3Qm94PSIwIDAgMTI4MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI0ZGRkZGRiI+PHBhdGggZD0iTTEyODAgMy40QzEwNTAuNTkgMTggMTAxOS40IDg0Ljg5IDczNC40MiA4NC44OWMtMzIwIDAtMzIwLTg0LjMtNjQwLTg0LjNDNTkuNC41OSAyOC4yIDEuNiAwIDMuNFYxNDBoMTI4MHoiIGZpbGwtb3BhY2l0eT0iLjMiLz48cGF0aCBkPSJNMCAyNC4zMWM0My40Ni01LjY5IDk0LjU2LTkuMjUgMTU4LjQyLTkuMjUgMzIwIDAgMzIwIDg5LjI0IDY0MCA4OS4yNCAyNTYuMTMgMCAzMDcuMjgtNTcuMTYgNDgxLjU4LTgwVjE0MEgweiIgZmlsbC1vcGFjaXR5PSIuNSIvPjxwYXRoIGQ9Ik0xMjgwIDUxLjc2Yy0yMDEgMTIuNDktMjQyLjQzIDUzLjQtNTEzLjU4IDUzLjQtMzIwIDAtMzIwLTU3LTY0MC01Ny00OC44NS4wMS05MC4yMSAxLjM1LTEyNi40MiAzLjZWMTQwaDEyODB6Ii8+PC9nPjwvc3ZnPg=="); }
+    .wave-reviews-top { height: 45px; background-size: 100% 45px; background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSI0NXB4IiB2aWV3Qm94PSIwIDAgMTI4MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI0ZGRkZGRiI+PHBhdGggZD0iTTAgNTEuNzZjMzYuMjEtMi4yNSA3Ny41Ny0zLjU4IDEyNi40Mi0zLjU4IDMyMCAwIDMyMCA1NyA2NDAgNTcgMjcxLjE1IDAgMzEyLjU4LTQwLjkxIDUxMy41OC01My40VjBIMHoiIGZpbGwtb3BhY2l0eT0iLjMiLz48cGF0aCBkPSJNMCAyNC4zMWM0My40Ni01LjY5IDk0LjU2LTkuMjUgMTU4LjQyLTkuMjUgMzIwIDAgMzIwIDg5LjI0IDY0MCA4OS4yNCAyNTYuMTMgMCAzMDcuMjgtNTcuMTYgNDgxLjU4LTgwVjBIMHoiIGZpbGwtb3BhY2l0eT0iLjUiLz48cGF0aCBkPSJNMCAwdjMuNEMyOC4yIDEuNiA1OS40LjU5IDk0LjQyLjU5YzMyMCAwIDMyMCA4NC4zIDY0MCA4NC4zIDI4NSAwIDMxNi4xNy02Ni44NSA1NDUuNTgtODEuNDlWMHoiLz48L2c+PC9zdmc+"); }
+    .wave-reviews-bottom { height: 45px; background-size: 100% 45px; background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSI0NXB4IiB2aWV3Qm94PSIwIDAgMTI4MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI0VFRjBGMSI+PHBhdGggZD0iTTEyODAgMy40QzEwNTAuNTkgMTggMTAxOS40IDg0Ljg5IDczNC40MiA4NC44OWMtMzIwIDAtMzIwLTg0LjMtNjQwLTg0LjNDNTkuNC41OSAyOC4yIDEuNiAwIDMuNFYxNDBoMTI4MHoiIGZpbGwtb3BhY2l0eT0iLjMiLz48cGF0aCBkPSJNMCAyNC4zMWM0My40Ni01LjY5IDk0LjU2LTkuMjUgMTU4LjQyLTkuMjUgMzIwIDAgMzIwIDg5LjI0IDY0MCA4OS4yNCAyNTYuMTMgMCAzMDcuMjgtNTcuMTYgNDgxLjU4LTgwVjE0MEgweiIgZmlsbC1vcGFjaXR5PSIuNSIvPjxwYXRoIGQ9Ik0xMjgwIDUxLjc2Yy0yMDEgMTIuNDktMjQyLjQzIDUzLjQtNTEzLjU4IDUzLjQtMzIwIDAtMzIwLTU3LTY0MC01Ny00OC44NS4wMS05MC4yMSAxLjM1LTEyNi40MiAzLjZWMTQwaDEyODB6Ii8+PC9nPjwvc3ZnPg=="); }
+    .wave-tab-top { height: 75px; background-size: 100% 75px; background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSI3NXB4IiB2aWV3Qm94PSIwIDAgMTI4MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI2ZmZmZmZiI+PHBhdGggZD0iTTAgMHYuNDhDMTguNjIgOS4zOCAyOTcuODEgMTQwIDYzOS41IDE0MCA5OTMuMjQgMTQwIDEyODAgMCAxMjgwIDB6IiBmaWxsLW9wYWNpdHk9Ii4zIi8+PHBhdGggZD0iTTAgLjZjMTQgOC4yOCAxNzYuNTQgOTkuOCA1NTUuNDUgMTE5LjE0Qzk1Mi40MSAxNDAgMTI4MCAwIDEyODAgMEgweiIgZmlsbC1vcGFjaXR5PSIuNSIvPjxwYXRoIGQ9Ik03MjYuMjkgMTAxLjJDMTEyNi4zNiA3OS45MiAxMjgxIDAgMTI4MSAwSDFjLjA1IDAgMzI1LjI1IDEyMi40OCA3MjUuMjkgMTAxLjJ6Ii8+PC9nPjwvc3ZnPg=="); }
+    .wave-tab-bottom { height: 75px; background-size: 100% 75px; background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSI3NXB4IiB2aWV3Qm94PSIwIDAgMTI4MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iI2ZmZmZmZiI+PHBhdGggZD0iTTcyNS4yOSAxMDEuMkMzMjUuMjIgMTIyLjQ4IDAgMCAwIDB2MTQwaDEyODBWMHMtMTU0LjY0IDc5LjkyLTU1NC43MSAxMDEuMnoiIGZpbGwtb3BhY2l0eT0iLjMiLz48cGF0aCBkPSJNNTU2LjQ1IDExOS43NEM5NTMuNDEgMTQwIDEyODAgMTQgMTI4MCAxNHYxMjZIMFYwczE1OS41IDk5LjQ4IDU1Ni40NSAxMTkuNzR6IiBmaWxsLW9wYWNpdHk9Ii41Ii8+PHBhdGggZD0iTTY0MCAxNDBjMzUzLjQ2IDAgNjQwLTE0MCA2NDAtMTM5djE0MEgwVjBzMjg2LjU0IDE0MCA2NDAgMTQweiIvPjwvZz48L3N2Zz4="); }
+    .wave-contact-top { height: 100px; background-size: 100% 100px; background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDBweCIgdmlld0JveD0iMCAwIDEyODAgMTQwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGZpbGw9IiNGRkZGRkYiPjxwYXRoIGQ9Ik02NDAgMTQwTDEyODAgMEgweiIgZmlsbC1vcGFjaXR5PSIuNSIvPjxwYXRoIGQ9Ik02NDAgOThsNjQwLTk4SDB6Ii8+PC9nPjwvc3ZnPg=="); }
   </style>
 </head>
 <body class="bg-white">
@@ -201,8 +211,9 @@
       </div>
     </section>
 
-    <!-- Hero Section — exact gradient from source: 230deg, rgba(10,161,255,0.71) 0%, rgba(12,26,104,0.89) 80% + bg image -->
-    <section class="py-16 md:py-24 relative overflow-hidden" style="background: linear-gradient(230deg, rgba(10,161,255,0.71) 0%, rgba(12,26,104,0.89) 80%), url('assets/images/hero-bg.webp') center/cover no-repeat; background-color: #003070;">
+    <!-- Hero Section -->
+    <section class="py-16 md:py-24 pb-20 relative overflow-hidden" style="background: linear-gradient(230deg, rgba(10,161,255,0.71) 0%, rgba(12,26,104,0.89) 80%), url('assets/images/hero-bg.webp') center/cover no-repeat; background-color: #003070;">
+      <div class="divider divider-bottom wave-hero-bottom"></div>
       <div class="max-w-site mx-auto px-4 text-center max-w-3xl relative z-10">
         <h1 class="text-3xl md:text-4xl lg:text-5xl leading-tight mb-6 !text-white">
           Connect with More Homebuyers &amp; Sellers On Facebook with MLS Search
@@ -281,8 +292,10 @@
       </div>
     </section>
 
-    <!-- Customer Reviews Preview — gradient bg from source -->
-    <section class="py-16 md:py-24" id="reviews-section" style="background: linear-gradient(230deg, rgba(10,161,255,0.71) 0%, rgba(12,26,104,0.89) 80%), url('assets/images/hero-bg-reviews.webp') center/cover no-repeat; background-color: #003070;">
+    <!-- Customer Reviews Preview -->
+    <section class="py-20 md:py-28 relative" id="reviews-section" style="background: linear-gradient(230deg, rgba(10,161,255,0.71) 0%, rgba(12,26,104,0.89) 80%), url('assets/images/hero-bg-reviews.webp') center/cover no-repeat; background-color: #003070;">
+      <div class="divider divider-top wave-reviews-top"></div>
+      <div class="divider divider-bottom wave-reviews-bottom"></div>
       <div class="max-w-site mx-auto px-4 text-center">
         <h2 class="text-3xl md:text-4xl mb-4 !text-white">Here's What Our Customers Say</h2>
         <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mt-10">
@@ -366,8 +379,10 @@
       </div>
     </section>
 
-    <!-- Bonus Find a Home Tab — gradient from source: 316deg #003070 13% to #0aa1ff 100% -->
-    <section class="py-16 md:py-24" style="background: linear-gradient(316deg, #003070 13%, #0aa1ff 100%);">
+    <!-- Bonus Find a Home Tab -->
+    <section class="py-20 md:py-28 relative" style="background: linear-gradient(316deg, #003070 13%, #0aa1ff 100%);">
+      <div class="divider divider-top wave-tab-top"></div>
+      <div class="divider divider-bottom wave-tab-bottom"></div>
       <div class="max-w-site mx-auto px-4">
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div class="flex justify-center order-2 md:order-1">
@@ -563,8 +578,9 @@
       </div>
     </section>
 
-    <!-- Contact Form — gradient from source: #223949 to #161a1d + bg image -->
-    <section class="py-16 md:py-24" id="contact" style="background: linear-gradient(rgb(34,57,73) 0%, rgb(22,26,29) 100%), url('assets/images/hero-bg-contact.webp') center/cover no-repeat;">
+    <!-- Contact Form -->
+    <section class="py-20 md:py-28 relative" id="contact" style="background: linear-gradient(rgb(34,57,73) 0%, rgb(22,26,29) 100%), url('assets/images/hero-bg-contact.webp') center/cover no-repeat;">
+      <div class="divider divider-top wave-contact-top"></div>
       <div class="max-w-site mx-auto px-4">
         <div class="max-w-xl mx-auto">
           <h1 class="text-3xl md:text-4xl text-center mb-4 !text-white">Have Questions? Contact Us.</h1>
