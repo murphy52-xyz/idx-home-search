@@ -31,15 +31,20 @@
   </script>
   <style>
     *, *::before, *::after { box-sizing: border-box; }
-    body { font-family: 'Lato', sans-serif; color: #64748b; font-size: 18px; line-height: 1.4; margin: 0; }
-    h1, h2, h3, h4 { color: #223949; }
+    body { font-family: 'Lato', sans-serif; color: #223949; font-size: 18px; line-height: 1.4; margin: 0; }
+    h1 { color: #223949; font-size: 44.8px; font-weight: 900; line-height: 1.35; }
+    h2 { color: #223949; font-size: 43.2px; font-weight: 900; line-height: 1.35; }
+    h3 { color: #223949; font-size: 35.2px; font-weight: 700; line-height: 1.4; }
+    h4 { color: #223949; font-size: 22.4px; font-weight: 800; line-height: 1.35; }
+    .blurb-title { font-size: 22.4px; font-weight: 800; line-height: 1.35; color: #223949; }
     .cta-btn {
       background: #dc2209; color: #fff; border-radius: 5px; padding: 8px 24px;
       font-size: 18px; font-weight: 700; letter-spacing: 1px; border: none; cursor: pointer;
       display: inline-block; text-decoration: none; transition: background .2s;
     }
     .cta-btn:hover { background: #b01d00; }
-    .max-w-site { max-width: 1240px; margin: 0 auto; padding: 0 20px; }
+    .max-w-site { max-width: 90%; margin: 0 auto; padding: 0; }
+    @media (min-width: 1200px) { .max-w-site { max-width: 1080px; } }
     .hero-gradient {
       background: linear-gradient(230deg, rgba(10,161,255,0.71) 0%, rgba(12,26,104,0.89) 80%), url('assets/images/hero-bg.webp') center/cover no-repeat;
       background-color: #003070;
@@ -172,7 +177,7 @@
         <!-- Left: Selector -->
         <div class="md:w-1/2 text-white">
           <h1 class="text-[44.8px] font-black leading-[1.35] mb-6 text-white">Capture More Leads with the #1-Ranked IDX Real Estate Home Search for Facebook Business Pages</h1>
-          <h2 class="text-2xl font-bold mb-6 text-white opacity-90">Check if your MLS is available.</h2>
+          <h2 class="mb-6 text-white opacity-90">Check if your MLS is available.</h2>
 
           <div class="mb-4">
             <select id="state-select" class="w-full p-3 rounded text-gray-800 text-base font-semibold">
@@ -222,13 +227,13 @@
     <section class="bg-green-section text-white py-6">
       <div class="max-w-site flex items-center justify-center gap-3 text-center flex-wrap">
         <img src="assets/images/success-check.png" alt="✓" class="w-8 h-8">
-        <p class="text-xl font-bold"><span id="mls-confirm-name" class="text-white">Your MLS</span> is available for IDX Home Search on Facebook!</p>
+        <p class=""><span id="mls-confirm-name" class="text-white">Your MLS</span> is available for IDX Home Search on Facebook!</p>
         <button onclick="switchToChecker()" class="text-sm underline opacity-80 hover:opacity-100 ml-2">Change MLS</button>
       </div>
     </section>
 
     <!-- Section 2: Hero (gradient) — wave-bottom -->
-    <section class="hero-gradient py-20 wave-bottom" id="hero-product">
+    <section class="hero-gradient wave-bottom" id="hero-product" style="padding: 100px 0 45px;">
       <div class="max-w-site flex flex-col md:flex-row items-center gap-12">
         <!-- Left 50%: text -->
         <div class="md:w-1/2 text-white">
@@ -248,13 +253,13 @@
     </section>
 
     <!-- Section 3: Features (white) -->
-    <section class="bg-white py-20" id="features">
+    <section class="bg-white" id="features" style="padding: 50px 0;">
       <!-- Feature 1: The Entire MLS Search — heading full-width, then 2/5 text + 3/5 image -->
       <div class="max-w-site mb-16">
-        <h2 class="text-3xl font-bold text-center mb-10">The Entire MLS Search Promoted On Your Facebook Business Page</h2>
+        <h2 class="text-center mb-10">The Entire MLS Search Promoted On Your Facebook Business Page</h2>
         <div class="flex flex-col md:flex-row items-center gap-10">
           <div class="md:w-2/5">
-            <h3 class="text-xl font-bold mb-4">Reach more local homebuyers &amp; sellers with IDX on Facebook.</h3>
+            <h3 class="mb-4">Reach more local homebuyers &amp; sellers with IDX on Facebook.</h3>
             <p class="mb-4">With over 240 million active users in the United States alone, Facebook is by far the most popular social site on the web. The average American logs in 8 times and spends an astonishing 40 minutes a day on Facebook, and a whopping 84% of people aged 30-49 use it – an ideal demographic for real estate agents. This makes it a valuable marketing tool for savvy agents and a prime place for you to generate leads.</p>
             <p class="mb-6" style="color: #5d9ed6;">IDX Home Search connects you with this vast audience of buyers and sellers on Facebook by letting them search the entire MLS from your Facebook business page.</p>
             <a href="#checkout-container" class="cta-btn">TRY IDX TODAY</a>
@@ -267,13 +272,13 @@
 
       <!-- Feature 2: Never Miss A Lead — heading full-width, then 3/5 image + 2/5 text -->
       <div class="max-w-site mb-16">
-        <h2 class="text-3xl font-bold text-center mb-10">Never Miss A Lead with Real-time Email Notifications</h2>
+        <h2 class="text-center mb-10">Never Miss A Lead with Real-time Email Notifications</h2>
         <div class="flex flex-col md:flex-row items-center gap-10">
           <div class="md:w-3/5 flex justify-center">
             <img src="assets/images/IDX-ipad-leads.webp" alt="Lead capture on iPad and iPhone" class="max-w-full w-[560px]">
           </div>
           <div class="md:w-2/5">
-            <h3 class="text-xl font-bold mb-4">Built-in lead capture and activity notifications.</h3>
+            <h3 class="mb-4">Built-in lead capture and activity notifications.</h3>
             <p class="mb-6">We place lead prompts and calls to action throughout the search to make it easy for potential buyers to transition into contactable leads. You'll receive email notifications each time a lead is captured on your search. Notifications include lead contact info, allowing you to follow up immediately or export to any of your drip marketing campaigns.</p>
             <a href="#checkout-container" class="cta-btn">CLAIM YOUR OFFER</a>
           </div>
@@ -282,16 +287,16 @@
 
       <!-- Brokerage logos within this white section -->
       <div class="max-w-site text-center">
-        <h3 class="text-xl font-bold text-center mb-6">Used by agents in these brokerages &amp; more</h3>
+        <h3 class="text-center mb-6">Used by agents in these brokerages &amp; more</h3>
         <img src="assets/images/brokerage-logos-desktop.webp" alt="Brokerage logos" class="mx-auto hidden md:inline-block max-w-3xl w-full">
         <img src="assets/images/brokerage-logos-mobile.webp" alt="Brokerage logos" class="mx-auto md:hidden max-w-sm w-full">
       </div>
     </section>
 
     <!-- Section 4: Reviews Preview (gradient) — wave-bottom -->
-    <section class="reviews-gradient py-20 wave-bottom wave-bottom-eef" id="reviews-section">
+    <section class="reviews-gradient wave-bottom" style="padding: 45px 0; wave-bottom-eef" id="reviews-section">
       <div class="max-w-site">
-        <h2 class="text-3xl font-bold text-center text-white mb-12">What Agents Are Saying</h2>
+        <h2 class="text-center text-white mb-12">What Agents Are Saying</h2>
         <div class="grid md:grid-cols-3 gap-8">
           <div class="bg-white rounded-lg p-6 shadow-lg">
             <h4 class="font-bold text-heading text-base mb-1">Better than my website IDX</h4>
@@ -322,20 +327,20 @@
     </section>
 
     <!-- Section 5: Consumers Love (#eef0f1) -->
-    <section class="bg-light-section py-20">
+    <section class="bg-light-section" style="padding: 45px 0 50px;">
       <div class="max-w-site">
-        <h2 class="text-3xl font-bold text-center mb-12">A Home Search Consumers Love</h2>
+        <h2 class="text-center mb-12">A Home Search Consumers Love</h2>
         <div class="flex flex-col md:flex-row items-start gap-6">
           <!-- Left 1/4: features -->
           <div class="md:w-1/4 space-y-8 pt-8">
             <div>
               
-              <h4 class="text-lg font-bold mb-2">Be contacted from any listing</h4>
+              <h4 class="mb-2">Be contacted from any listing</h4>
               <p class="text-sm">Your contact number is clearly displayed for users to contact you on every listing. Buyers can also email you or schedule a showing with the click of a button.</p>
             </div>
             <div>
               
-              <h4 class="text-lg font-bold mb-2">Map/Grid Views</h4>
+              <h4 class="mb-2">Map/Grid Views</h4>
               <p class="text-sm">Buyers can toggle between an easy to pan map view and listing grid view when searching homes.</p>
             </div>
           </div>
@@ -347,12 +352,12 @@
           <div class="md:w-1/4 space-y-8 pt-8">
             <div>
               
-              <h4 class="text-lg font-bold mb-2">High-res listing photo galleries</h4>
+              <h4 class="mb-2">High-res listing photo galleries</h4>
               <p class="text-sm">Clicking on "photos" on the listing card brings up a large-scale photo gallery. Images auto-rotate through the gallery showing off the property effortlessly.</p>
             </div>
             <div>
               
-              <h4 class="text-lg font-bold mb-2">The most current info</h4>
+              <h4 class="mb-2">The most current info</h4>
               <p class="text-sm">Listings are updated every 5 minutes with the most current information on price, days on market, nearby shopping, and more!</p>
             </div>
           </div>
@@ -361,17 +366,17 @@
     </section>
 
     <!-- Section 6: Facebook Integration (white) -->
-    <section class="bg-white py-20">
+    <section class="bg-white" style="padding: 50px 0 0;">
       <div class="max-w-site">
         <!-- FB Integration & Promotion: heading full-width, 2/5 + 3/5 -->
         <div class="mb-20">
           <div class="text-center mb-10">
-            <h2 class="text-3xl font-bold">Facebook Integration &amp; Promotion</h2>
+            <h2 class="">Facebook Integration &amp; Promotion</h2>
             <p class="text-lg mt-3 max-w-2xl mx-auto">Receive Automatic Posts 4x Per Month To Promote Your Search</p>
           </div>
           <div class="flex flex-col md:flex-row items-center gap-10">
             <div class="md:w-2/5">
-              <h3 class="text-xl font-bold mb-3">Receive Automatic Posts 4x Per Month To Promote Your Search</h3>
+              <h3 class="mb-3">Receive Automatic Posts 4x Per Month To Promote Your Search</h3>
               <p class="mb-4">We pin a post to the top of your Facebook business page with a link to your search so it's the very first thing that people see when they come to your page.</p>
               <a href="#checkout-container" class="cta-btn">CLAIM YOUR OFFER</a>
             </div>
@@ -384,7 +389,7 @@
         <!-- Find a Home Tab: 3/5 + 2/5 -->
         <div class="mb-20">
           <div class="text-center mb-10">
-            <h2 class="text-3xl font-bold">Bonus "Find a Home" Tab</h2>
+            <h2 class="">Bonus "Find a Home" Tab</h2>
             <p class="text-lg mt-3 max-w-2xl mx-auto">For qualifying pages with 2,000+ likes, get a dedicated "Find a Home" tab directly on your Facebook page.</p>
           </div>
           <div class="flex flex-col md:flex-row items-center gap-10">
@@ -392,7 +397,7 @@
               <img src="assets/images/IDX-ipad-fb-search.webp" alt="Find a Home Tab" class="max-w-full w-[520px] rounded-lg shadow-lg">
             </div>
             <div class="md:w-2/5">
-              <h3 class="text-xl font-bold mb-3">Bonus 'Find a Home' tab for qualifying pages.</h3>
+              <h3 class="mb-3">Bonus 'Find a Home' tab for qualifying pages.</h3>
               <p class="mb-4"><strong>Pages with 2,000 likes or more</strong> can add a 'Find A Home' tab to the Facebook business page(s) of their choosing. All you do is select your page, click submit, and you're done! This tab will appear on your page on the left side menu beneath your profile photo.</p>
               <a href="#checkout-container" class="cta-btn">CLAIM YOUR OFFER</a>
             </div>
@@ -402,12 +407,12 @@
         <!-- Website Integration: 2/5 + 3/5 -->
         <div>
           <div class="text-center mb-10">
-            <h2 class="text-3xl font-bold">Add An Exclusive MLS Search to Your Own Website</h2>
+            <h2 class="">Add An Exclusive MLS Search to Your Own Website</h2>
             <p class="text-lg mt-3 max-w-2xl mx-auto">Get a customizable, standalone MLS search for your personal website too — included with your subscription.</p>
           </div>
           <div class="flex flex-col md:flex-row items-center gap-10">
             <div class="md:w-2/5">
-              <h3 class="text-xl font-bold mb-3">Add An Exclusive MLS Search to Your Own Website</h3>
+              <h3 class="mb-3">Add An Exclusive MLS Search to Your Own Website</h3>
               <p class="mb-4">Transform your existing website with IDX Home Search's seamless integration. Our user-friendly code snippet allows you to effortlessly incorporate advanced home search features, enhancing the user experience and driving lead capture!</p>
               <a href="#checkout-container" class="cta-btn">CLAIM YOUR OFFER</a>
             </div>
@@ -420,7 +425,7 @@
     </section>
 
     <!-- Section 7: Testimonial (gradient 316deg) — wave-bottom -->
-    <section class="testimonial-gradient py-20 wave-bottom">
+    <section class="testimonial-gradient" style="padding: 100px 0 50px; wave-bottom">
       <div class="max-w-site flex flex-col md:flex-row items-center gap-10">
         <!-- 2/5 photo -->
         <div class="md:w-2/5 flex justify-center">
@@ -438,11 +443,11 @@
     </section>
 
     <!-- Section 8: Checkout (white) -->
-    <section class="bg-white py-20" id="checkout-container">
+    <section class="bg-white" id="checkout-container" style="padding: 50px 0;">
       <div class="max-w-site flex flex-col md:flex-row gap-12">
         <!-- 3/5 form -->
         <div class="md:w-3/5">
-          <h3 class="text-2xl font-bold mb-4">Order Details</h3>
+          <h3 class="mb-4">Order Details</h3>
           <h4 class="mb-1"><span class="font-bold" style="color: #5d9ed6;">MLS:</span> <span id="checkout-mls-name" class="text-mls-coral font-bold">Your MLS</span></h4>
           <h4 class="mb-1"><strong>Product:</strong> IDX Home Search on Facebook</h4>
           <h4 class="mb-6"><strong>Plan:</strong> Annual</h4>
@@ -484,9 +489,9 @@
     </section>
 
     <!-- Section 9: FAQ (white) -->
-    <section class="bg-white py-20" id="faq-section">
+    <section class="bg-white" id="faq-section" style="padding: 120px 0 50px;">
       <div class="max-w-site">
-        <h2 class="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+        <h2 class="text-center mb-12">Frequently Asked Questions</h2>
         <div class="flex flex-col md:flex-row gap-8">
           <!-- Left column: 3 cards -->
           <div class="md:w-1/2">
@@ -523,10 +528,10 @@
     </section>
 
     <!-- Section 11: Contact (gradient) — wave-top-dark isn't needed; just the gradient -->
-    <section class="contact-gradient py-20" id="contact-section">
+    <section class="contact-gradient" style="padding: 80px 0;" id="contact-section">
       <div class="max-w-site">
         <div class="max-w-xl mx-auto">
-          <h2 class="text-3xl font-bold text-center text-white mb-8">Have Questions? Contact Us</h2>
+          <h2 class="text-center text-white mb-8">Have Questions? Contact Us</h2>
           <form id="contact-form" class="space-y-4">
             <input type="text" placeholder="Your Name" required class="checkout-input">
             <input type="email" placeholder="Your Email" required class="checkout-input">
@@ -541,9 +546,9 @@
     </section>
 
     <!-- Section 12: Full Reviews (#161a1d) -->
-    <section class="bg-dark-section py-20 text-white" id="full-reviews">
+    <section class="bg-dark-section" style="padding: 50px 0; text-white" id="full-reviews">
       <div class="max-w-site">
-        <h2 class="text-3xl font-bold text-center text-white mb-12">Customer Reviews</h2>
+        <h2 class="text-center text-white mb-12">Customer Reviews</h2>
         <div id="reviews-list" class="grid md:grid-cols-2 gap-6">
           <!-- Review cards populated by JS -->
         </div>
