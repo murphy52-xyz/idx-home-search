@@ -69,24 +69,24 @@
       background: linear-gradient(to bottom, #223949, #161a1d), url('assets/images/hero-bg-contact.webp') center/cover no-repeat;
       background-color: #223949;
     }
-    /* Wave divider SVGs */
+    /* Wave divider SVGs — extracted from original Divi theme */
     .wave-bottom { position: relative; }
     .wave-bottom::after {
-      content: ''; position: absolute; bottom: -1px; left: 0; width: 100%; height: 60px;
-      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'%3E%3Cpath fill='%23ffffff' d='M0,30 C360,60 720,0 1080,30 C1260,45 1380,40 1440,30 L1440,60 L0,60 Z'/%3E%3C/svg%3E") bottom/100% 60px no-repeat;
-      pointer-events: none;
+      content: ''; position: absolute; bottom: -1px; left: 0; width: 100%; height: 100px;
+      background: url("data:image/svg+xml,%3Csvg width='100%25' height='100px' viewBox='0 0 1280 140' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23FFFFFF'%3E%3Cpath d='M1280 3.4C1050.59 18 1019.4 84.89 734.42 84.89c-320 0-320-84.3-640-84.3C59.4.59 28.2 1.6 0 3.4V140h1280z' fill-opacity='.3'/%3E%3Cpath d='M0 24.31c43.46-5.69 94.56-9.25 158.42-9.25 320 0 320 89.24 640 89.24 256.13 0 307.28-57.16 481.58-80V140H0z' fill-opacity='.5'/%3E%3Cpath d='M1280 51.76c-201 12.49-242.43 53.4-513.58 53.4-320 0-320-57-640-57-48.85.01-90.21 1.35-126.42 3.6V140h1280z'/%3E%3C/g%3E%3C/svg%3E") bottom/100% 100px no-repeat;
+      pointer-events: none; z-index: 10;
     }
     .wave-bottom-eef::after {
-      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'%3E%3Cpath fill='%23eef0f1' d='M0,30 C360,60 720,0 1080,30 C1260,45 1380,40 1440,30 L1440,60 L0,60 Z'/%3E%3C/svg%3E") bottom/100% 60px no-repeat;
+      background: url("data:image/svg+xml,%3Csvg width='100%25' height='100px' viewBox='0 0 1280 140' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23EEF0F1'%3E%3Cpath d='M1280 3.4C1050.59 18 1019.4 84.89 734.42 84.89c-320 0-320-84.3-640-84.3C59.4.59 28.2 1.6 0 3.4V140h1280z' fill-opacity='.3'/%3E%3Cpath d='M0 24.31c43.46-5.69 94.56-9.25 158.42-9.25 320 0 320 89.24 640 89.24 256.13 0 307.28-57.16 481.58-80V140H0z' fill-opacity='.5'/%3E%3Cpath d='M1280 51.76c-201 12.49-242.43 53.4-513.58 53.4-320 0-320-57-640-57-48.85.01-90.21 1.35-126.42 3.6V140h1280z'/%3E%3C/g%3E%3C/svg%3E") bottom/100% 100px no-repeat;
     }
     .wave-top { position: relative; }
     .wave-top::before {
-      content: ''; position: absolute; top: -1px; left: 0; width: 100%; height: 60px;
-      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'%3E%3Cpath fill='%23ffffff' d='M0,30 C360,0 720,60 1080,30 C1260,15 1380,20 1440,30 L1440,0 L0,0 Z'/%3E%3C/svg%3E") top/100% 60px no-repeat;
+      content: ''; position: absolute; top: -1px; left: 0; width: 100%; height: 100px;
+      background: url("data:image/svg+xml,%3Csvg width='100%25' height='100px' viewBox='0 0 1280 140' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23FFFFFF'%3E%3Cpath d='M0 51.76c36.21-2.25 77.57-3.58 126.42-3.58 320 0 320 57 640 57 271.15 0 312.58-40.91 513.58-53.4V0H0z' fill-opacity='.3'/%3E%3Cpath d='M0 24.31c43.46-5.69 94.56-9.25 158.42-9.25 320 0 320 89.24 640 89.24 256.13 0 307.28-57.16 481.58-80V0H0z' fill-opacity='.5'/%3E%3Cpath d='M0 0v3.4C28.2 1.6 59.4.59 94.42.59c320 0 320 84.3 640 84.3 285 0 316.17-66.85 545.58-81.49V0z'/%3E%3C/g%3E%3C/svg%3E") top/100% 100px no-repeat;
       pointer-events: none; z-index: 1;
     }
     .wave-top-dark::before {
-      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 60' preserveAspectRatio='none'%3E%3Cpath fill='%23161a1d' d='M0,30 C360,0 720,60 1080,30 C1260,15 1380,20 1440,30 L1440,0 L0,0 Z'/%3E%3C/svg%3E") top/100% 60px no-repeat;
+      background: url("data:image/svg+xml,%3Csvg width='100%25' height='100px' viewBox='0 0 1280 140' preserveAspectRatio='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23161a1d'%3E%3Cpath d='M0 51.76c36.21-2.25 77.57-3.58 126.42-3.58 320 0 320 57 640 57 271.15 0 312.58-40.91 513.58-53.4V0H0z' fill-opacity='.3'/%3E%3Cpath d='M0 24.31c43.46-5.69 94.56-9.25 158.42-9.25 320 0 320 89.24 640 89.24 256.13 0 307.28-57.16 481.58-80V0H0z' fill-opacity='.5'/%3E%3Cpath d='M0 0v3.4C28.2 1.6 59.4.59 94.42.59c320 0 320 84.3 640 84.3 285 0 316.17-66.85 545.58-81.49V0z'/%3E%3C/g%3E%3C/svg%3E") top/100% 100px no-repeat;
     }
     /* Stars */
     .stars { color: #f5a623; font-size: 16px; letter-spacing: 2px; }
@@ -302,35 +302,35 @@
       </div>
     </section>
 
-    <!-- Section 4: Reviews Preview (gradient) — wave-bottom -->
-    <section class="hero-gradient wave-bottom" style="padding: 45px 0;" id="reviews-section">
+    <!-- Section 4: Reviews Preview (gradient) — wave-top + wave-bottom -->
+    <section class="reviews-gradient wave-top wave-bottom wave-bottom-eef" style="padding: 100px 0 180px;" id="reviews-section">
       <div class="max-w-site">
         <h2 class="text-center text-white mb-12">Here's What Our Customers Say</h2>
         <div class="grid md:grid-cols-3 gap-8">
-          <div class="bg-white rounded-lg p-6 shadow-lg">
-            <h4 class="font-bold text-heading text-base mb-1">Better than my website IDX</h4>
+          <div class="bg-[#eef0f1] rounded-lg p-6 text-center" style="box-shadow: 0 4px 8px rgba(4,6,8,0.35);">
+            <h4 class="font-bold text-heading mb-1" style="font-size:1rem !important;">Better than my website IDX</h4>
             <div class="stars mb-1">★★★★★</div>
             <p class="text-xs text-gray-400 mb-3">November 19, 2025</p>
             <p class="text-sm mb-4">This is a million times better than my broker IDX on my website. The value for the price is unbelievable. It goes to show how often we get ripped off by other vendors charging so much more for services that don't even function.</p>
             <p class="font-bold text-heading text-sm">Kristen F</p>
           </div>
-          <div class="bg-white rounded-lg p-6 shadow-lg">
-            <h4 class="font-bold text-heading text-base mb-1">It's a 2 for 1</h4>
+          <div class="bg-[#eef0f1] rounded-lg p-6 text-center" style="box-shadow: 0 4px 8px rgba(4,6,8,0.35);">
+            <h4 class="font-bold text-heading mb-1" style="font-size:1rem !important;">It's a 2 for 1</h4>
             <div class="stars mb-1">★★★★★</div>
             <p class="text-xs text-gray-400 mb-3">November 18, 2025</p>
             <p class="text-sm mb-4">I was referred through my MLS and very glad that I was. I was pleasantly surprised to find out that in addition to Facebook this also functions as a Home Search website totally separate from Facebook. It's like getting a 2 for 1.</p>
             <p class="font-bold text-heading text-sm">Alex R</p>
           </div>
-          <div class="bg-white rounded-lg p-6 shadow-lg">
-            <h4 class="font-bold text-heading text-base mb-1">Much better than I expected!</h4>
+          <div class="bg-[#eef0f1] rounded-lg p-6 text-center" style="box-shadow: 0 4px 8px rgba(4,6,8,0.35);">
+            <h4 class="font-bold text-heading mb-1" style="font-size:1rem !important;">Much better than I expected!</h4>
             <div class="stars mb-1">★★★★★</div>
             <p class="text-xs text-gray-400 mb-3">November 3, 2025</p>
             <p class="text-sm mb-4">I wasn't expecting such a good looking, functional home search. It works much better than the other one I've been using on my site for years and the added features are top-notch. For the price, it's a steal!</p>
             <p class="font-bold text-heading text-sm">Bob J</p>
           </div>
         </div>
-        <div class="text-center mt-8">
-          <a href="#full-reviews" class="text-white font-bold underline hover:text-gold text-lg">SEE MORE REVIEWS</a>
+        <div class="text-center mt-10">
+          <a href="#full-reviews" class="cta-btn text-lg py-3 px-8 inline-block">SEE MORE REVIEWS</a>
         </div>
       </div>
     </section>
