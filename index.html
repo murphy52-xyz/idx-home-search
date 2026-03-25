@@ -32,10 +32,16 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; }
     body { font-family: 'Lato', sans-serif; color: #223949; font-size: 18px; line-height: 1.4; margin: 0; }
-    h1 { color: #223949; font-size: 44.8px; font-weight: 900; line-height: 1.35; }
-    h2 { color: #223949; font-size: 43.2px; font-weight: 900; line-height: 1.35; }
-    h3 { color: #223949; font-size: 35.2px; font-weight: 700; line-height: 1.4; }
-    h4 { color: #223949; font-size: 22.4px; font-weight: 800; line-height: 1.35; }
+    h1 { color: #223949; font-size: 2rem !important; font-weight: 900 !important; line-height: 1.35 !important; }
+    h2 { color: #223949; font-size: 1.8rem !important; font-weight: 900 !important; line-height: 1.35 !important; }
+    h3 { color: #223949; font-size: 1.6rem !important; font-weight: 700 !important; line-height: 1.4 !important; }
+    h4 { color: #223949; font-size: 1.4rem !important; font-weight: 800 !important; line-height: 1.35 !important; }
+    @media (min-width: 981px) {
+      h1 { font-size: 3.4rem !important; }
+      h2 { font-size: 3rem !important; }
+      h3 { font-size: 2.2rem !important; }
+      h4 { font-size: 1.6rem !important; }
+    }
     .blurb-title { font-size: 22.4px; font-weight: 800; line-height: 1.35; color: #223949; }
     .cta-btn {
       background: #dc2209; color: #fff; border-radius: 5px; padding: 8px 24px;
@@ -264,8 +270,8 @@
             <p class="mb-6" style="color: #5d9ed6;">IDX Home Search connects you with this vast audience of buyers and sellers on Facebook by letting them search the entire MLS from your Facebook business page.</p>
             <a href="#checkout-container" class="cta-btn">TRY IDX TODAY</a>
           </div>
-          <div class="md:w-3/5 flex justify-center">
-            <img src="assets/images/IDX-phones-leads.webp" alt="Instant Lead Alerts" class="max-w-full w-[520px]">
+          <div class="md:w-3/5 flex justify-center" style="background: url('assets/images/BG-blob_3.svg') center/contain no-repeat, radial-gradient(circle at center, rgba(10,161,255,0.7) 0%, rgba(0,48,112,0.8) 100%); padding: 20px;">
+            <img src="assets/images/IDX-phones-leads.webp" alt="Instant Lead Alerts" class="max-w-full w-full" style="max-width: 700px;">
           </div>
         </div>
       </div>
@@ -274,8 +280,8 @@
       <div class="max-w-site mb-16">
         <h2 class="text-center mb-10">Never Miss A Lead with Real-time Email Notifications</h2>
         <div class="flex flex-col md:flex-row items-center gap-10">
-          <div class="md:w-3/5 flex justify-center">
-            <img src="assets/images/IDX-ipad-leads.webp" alt="Lead capture on iPad and iPhone" class="max-w-full w-[560px]">
+          <div class="md:w-3/5 flex justify-center" style="background: url('assets/images/BG-blob_1.svg') center/contain no-repeat, linear-gradient(180deg, rgba(10,161,255,0.69) 0%, rgba(46,85,163,0.8) 100%); padding: 40px 20px;">
+            <img src="assets/images/IDX-ipad-leads.webp" alt="Lead capture on iPad and iPhone" class="max-w-full w-full" style="max-width: 700px;">
           </div>
           <div class="md:w-2/5">
             <h3 class="mb-4">Built-in lead capture and activity notifications.</h3>
