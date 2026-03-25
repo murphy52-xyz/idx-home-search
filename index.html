@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IDX Home Search — #1 Ranked IDX for Facebook</title>
+  <meta name="description" content="Capture more leads with the #1-ranked IDX real estate home search for Facebook Business Pages.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: '#0f2d7a',
+            'navy-dark': '#0c2340',
+            'cta-green': '#42a000',
+            'cta-green-hover': '#389000',
+            'body-gray': '#64748b',
+            'alt-bg': '#e8e8e8',
+            'top-bar': '#223a49',
+            accent: '#1a56db',
+          },
+          fontFamily: {
+            lato: ['Lato', 'sans-serif'],
+          },
+          maxWidth: {
+            site: '1240px',
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    body { font-family: 'Lato', sans-serif; font-size: 18px; line-height: 1.6; color: #64748b; }
+    h1, h2, h3, h4, h5, h6 { color: #0f2d7a; font-weight: 700; }
+    .btn-cta {
+      background: #42a000; color: #fff; border-radius: 60px; padding: 14px 40px;
+      font-weight: 700; font-size: 18px; display: inline-block; text-decoration: none;
+      transition: background 0.2s, transform 0.1s; cursor: pointer; border: none;
+    }
+    .btn-cta:hover { background: #389000; transform: translateY(-1px); }
+    .btn-cta:active { transform: translateY(0); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+    .faq-item.open .faq-answer { max-height: 500px; }
+    .faq-item.open .faq-chevron { transform: rotate(180deg); }
+    .faq-chevron { transition: transform 0.3s; }
+    .view-transition { animation: fadeIn 0.3s ease; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    .progress-bar-fill { background: linear-gradient(90deg, #42a000, #5cc800); transition: width 1s ease; }
+    select { appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%2364748b' d='M6 8L0 0h12z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; }
+    .star { color: #f59e0b; }
+    ::selection { background: #1a56db33; }
+    .hamburger-line { transition: all 0.3s; }
+    .mobile-menu { transition: max-height 0.3s ease, opacity 0.3s ease; }
+  </style>
+</head>
+<body class="bg-white">
+
+  <!-- Top Utility Bar -->
+  <div class="bg-top-bar text-white text-sm">
+    <div class="max-w-site mx-auto px-4 flex items-center justify-between h-10">
+      <a href="tel:904-549-7616" class="hover:underline flex items-center gap-1">
+        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+        904-549-7616
+      </a>
+      <div class="flex items-center gap-4">
+        <a href="https://www.homeasap.com/Directory" class="hover:underline hidden sm:inline">Search Directory</a>
+        <a href="https://www.homeasap.com/Account/Login" class="hover:underline hidden sm:inline">Agent Login</a>
+        <a href="https://www.homeasap.com/Directory/Services" class="hover:underline hidden sm:inline">Join Directory</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Header -->
+  <header class="bg-white shadow-sm sticky top-0 z-50">
+    <div class="max-w-site mx-auto px-4 flex items-center justify-between h-16">
+      <a href="/" class="flex-shrink-0">
+        <img src="assets/images/IDX-Logo-Horiz-Dark.svg" alt="IDX Home Search" class="h-10">
+      </a>
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-gray-700">
+        <a href="#features" class="hover:text-navy transition-colors">Features</a>
+        <a href="#reviews-section" class="hover:text-navy transition-colors">Reviews</a>
+        <a href="#faq" class="hover:text-navy transition-colors">FAQ</a>
+        <a href="#contact" class="hover:text-navy transition-colors">Contact</a>
+        <a href="#checkout-container" class="btn-cta text-sm !py-2 !px-6">Get Started</a>
+      </nav>
+      <!-- Mobile Hamburger -->
+      <button id="hamburger-btn" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Menu">
+        <span class="hamburger-line w-6 h-0.5 bg-gray-700 block"></span>
+        <span class="hamburger-line w-6 h-0.5 bg-gray-700 block"></span>
+        <span class="hamburger-line w-6 h-0.5 bg-gray-700 block"></span>
+      </button>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-menu md:hidden max-h-0 opacity-0 overflow-hidden bg-white border-t">
+      <div class="px-4 py-4 flex flex-col gap-3 text-sm font-semibold text-gray-700">
+        <a href="#features" class="py-2 border-b border-gray-100">Features</a>
+        <a href="#reviews-section" class="py-2 border-b border-gray-100">Reviews</a>
+        <a href="#faq" class="py-2 border-b border-gray-100">FAQ</a>
+        <a href="#contact" class="py-2 border-b border-gray-100">Contact</a>
+        <a href="#checkout-container" class="btn-cta text-center text-sm !py-2">Get Started</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Promo Banner -->
+  <div class="bg-navy-dark text-white py-3">
+    <div class="max-w-site mx-auto px-4 text-center">
+      <p class="text-lg font-bold">🌸 Annual Spring Sale! First 200 agents take <span class="text-yellow-400">40% off</span> with code <span class="bg-yellow-400 text-navy-dark px-2 py-0.5 rounded font-black text-sm ml-1">SPRINGIDX</span></p>
+      <div class="mt-2 max-w-md mx-auto">
+        <div class="flex justify-between text-xs mb-1">
+          <span>178 of 200 claimed</span>
+          <span class="text-yellow-400 font-bold">89% claimed</span>
+        </div>
+        <div class="w-full bg-white/20 rounded-full h-2.5">
+          <div class="progress-bar-fill h-2.5 rounded-full" style="width: 89%"></div>
+        </div>
+        <p class="text-xs mt-1 text-white/70">Only <strong class="text-yellow-400">22 spots</strong> remaining!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== VIEW 1: MLS CHECKER ==================== -->
+  <div id="view-checker" class="view-transition">
+    <section class="bg-gradient-to-br from-slate-50 to-white">
+      <div class="max-w-site mx-auto px-4 py-12 md:py-20">
+        <div class="grid md:grid-cols-2 gap-10 items-center">
+          <!-- Left: Phone mockup -->
+          <div class="flex justify-center order-2 md:order-1">
+            <img src="assets/images/IDX-phones-hero.webp" alt="IDX Home Search on mobile devices" class="max-w-sm w-full drop-shadow-2xl">
+          </div>
+          <!-- Right: Content + Checker -->
+          <div class="order-1 md:order-2">
+            <h1 class="text-3xl md:text-4xl lg:text-[42px] leading-tight mb-4">
+              Capture More Leads with the #1-Ranked IDX Real Estate Home Search for Facebook Business Pages
+            </h1>
+            <h2 class="text-xl md:text-2xl text-body-gray font-normal mb-8">Check if your MLS is available.</h2>
+
+            <!-- State Dropdown -->
+            <div class="mb-4">
+              <select id="state-select" class="w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-base bg-white focus:border-accent focus:outline-none transition-colors pr-10">
+                <option value="">Select Your State</option>
+              </select>
+            </div>
+
+            <!-- MLS Dropdown (hidden until state selected) -->
+            <div id="mls-select-wrapper" class="mb-4 hidden">
+              <select id="mls-select" class="w-full border-2 border-gray-300 rounded-lg px-4 py-3 text-base bg-white focus:border-accent focus:outline-none transition-colors pr-10">
+                <option value="">Select Your MLS</option>
+              </select>
+            </div>
+
+            <!-- Loading spinner for MLS -->
+            <div id="mls-loading" class="mb-4 hidden">
+              <div class="flex items-center gap-2 text-body-gray">
+                <svg class="animate-spin h-5 w-5 text-accent" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" fill="none"/><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"/></svg>
+                Loading MLS options...
+              </div>
+            </div>
+
+            <!-- Error message -->
+            <div id="mls-error" class="mb-4 hidden text-red-500 text-sm"></div>
+
+            <!-- Check Availability Button -->
+            <button id="check-btn" class="btn-cta w-full text-center text-lg" disabled>
+              Check Availability
+            </button>
+
+            <p class="mt-6 text-sm text-body-gray leading-relaxed">
+              Trusted by agents at RE/MAX, Keller Williams, Coldwell Banker, Century 21, and thousands of independent brokerages nationwide.
+            </p>
+
+            <!-- Brokerage logos (gray) -->
+            <div class="mt-6">
+              <img src="assets/images/brokerage-logos-gray.webp" alt="Trusted by top brokerages" class="w-full max-w-md opacity-70">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ==================== VIEW 2: MLS AVAILABLE (PRODUCT PAGE) ==================== -->
+  <div id="view-product" class="hidden view-transition">
+
+    <!-- MLS Confirmation Banner -->
+    <section class="bg-cta-green text-white py-4">
+      <div class="max-w-site mx-auto px-4 flex items-center justify-center gap-3 text-center">
+        <img src="assets/images/success-check.png" alt="" class="w-7 h-7">
+        <p class="text-lg md:text-xl font-bold">
+          <span id="mls-name-banner">Your MLS</span> is available for IDX Home Search on Facebook!
+        </p>
+      </div>
+      <div class="max-w-site mx-auto px-4 text-center mt-1">
+        <button id="change-mls-btn" class="text-white/80 hover:text-white underline text-sm transition-colors">Change MLS</button>
+      </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-slate-50 to-white py-12 md:py-20">
+      <div class="max-w-site mx-auto px-4 text-center max-w-3xl">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl leading-tight mb-6">
+          Connect with More Homebuyers &amp; Sellers On Facebook with MLS Search
+        </h1>
+        <p class="text-lg text-body-gray mb-8 max-w-2xl mx-auto">
+          Become the point of contact for every active listing in your entire MLS. Homebuyers and sellers will be able to search the MLS, save listings, and contact you directly — all from your Facebook page.
+        </p>
+        <a href="#checkout-container" class="btn-cta text-xl px-12 py-4 inline-block">CLAIM YOUR OFFER</a>
+        <p class="mt-4 text-body-gray">
+          Only <s class="text-gray-400">$149</s> <span class="text-cta-green font-bold text-xl">$89.40</span> for an entire year! Use promo code <strong class="text-navy">SPRINGIDX</strong> at checkout.
+        </p>
+      </div>
+    </section>
+
+    <!-- Video Section -->
+    <section class="bg-white py-12" id="features">
+      <div class="max-w-site mx-auto px-4">
+        <div class="max-w-3xl mx-auto">
+          <div class="relative w-full" style="padding-bottom:56.25%;">
+            <iframe src="https://player.vimeo.com/video/237437190?title=0&byline=0&portrait=0" class="absolute inset-0 w-full h-full rounded-xl shadow-lg" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Entire MLS Search -->
+    <section class="py-16 md:py-24 bg-white">
+      <div class="max-w-site mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-3xl md:text-4xl mb-6">The Entire MLS Search on Your Facebook Page</h2>
+            <p class="text-body-gray mb-4">
+              IDX Home Search adds a complete MLS property search to your Facebook Business Page. Your followers can browse every active listing — not just yours — and contact you directly about any property.
+            </p>
+            <p class="text-body-gray mb-6">
+              Listings update every 5 minutes, so your page always has the most current inventory. Homebuyers can search by location, price, beds, baths, and more — right from Facebook.
+            </p>
+            <a href="#checkout-container" class="btn-cta">TRY IDX TODAY</a>
+          </div>
+          <div class="flex justify-center">
+            <img src="assets/images/IDX-phones-leads.webp" alt="MLS search on phones with lead notifications" class="max-w-md w-full drop-shadow-xl">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Never Miss A Lead -->
+    <section class="py-16 md:py-24 bg-alt-bg">
+      <div class="max-w-site mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="flex justify-center order-2 md:order-1">
+            <img src="assets/images/IDX-ipad-leads.webp" alt="Lead notifications on iPad and phone" class="max-w-lg w-full drop-shadow-xl">
+          </div>
+          <div class="order-1 md:order-2">
+            <h2 class="text-3xl md:text-4xl mb-6">Never Miss A Lead</h2>
+            <p class="text-body-gray mb-4">
+              Every listing in the search has contact buttons that go directly to you. When a buyer inquires about any property, you get an instant email notification with their name, email, phone number, and the listing they're interested in.
+            </p>
+            <p class="text-body-gray mb-6">
+              You become the featured agent for every single listing in the MLS — not just your own. That's thousands of potential lead opportunities from one simple tool.
+            </p>
+            <a href="#checkout-container" class="btn-cta">CLAIM YOUR OFFER</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brokerage Logos Bar -->
+    <section class="bg-navy-dark py-10">
+      <div class="max-w-site mx-auto px-4 text-center">
+        <p class="text-white/70 text-sm mb-4 uppercase tracking-wider font-semibold">Trusted by agents at top brokerages</p>
+        <img src="assets/images/brokerage-logos-desktop.webp" alt="Brokerage logos" class="hidden md:inline-block max-w-3xl w-full mx-auto">
+        <img src="assets/images/brokerage-logos-mobile.webp" alt="Brokerage logos" class="md:hidden max-w-xs w-full mx-auto">
+      </div>
+    </section>
+
+    <!-- Customer Reviews Preview -->
+    <section class="py-16 md:py-24 bg-white" id="reviews-section">
+      <div class="max-w-site mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl mb-12">What Agents Are Saying</h2>
+        <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <!-- Review 1 -->
+          <div class="bg-gray-50 rounded-xl p-6 text-left shadow-sm">
+            <div class="star text-lg mb-2">★★★★★</div>
+            <p class="text-body-gray text-base mb-4">"IDX Home Search has been a game-changer for my Facebook page. I've gotten more leads in the last month than I did all of last quarter. The setup was incredibly easy."</p>
+            <p class="font-bold text-navy text-sm">— Sarah M.</p>
+            <p class="text-xs text-body-gray">Keller Williams, FL</p>
+          </div>
+          <!-- Review 2 -->
+          <div class="bg-gray-50 rounded-xl p-6 text-left shadow-sm">
+            <div class="star text-lg mb-2">★★★★★</div>
+            <p class="text-body-gray text-base mb-4">"I love that buyers can search the entire MLS right from my Facebook page. It makes me the go-to agent for anyone browsing in my area. Best investment I've made this year."</p>
+            <p class="font-bold text-navy text-sm">— Mike T.</p>
+            <p class="text-xs text-body-gray">RE/MAX, TX</p>
+          </div>
+          <!-- Review 3 -->
+          <div class="bg-gray-50 rounded-xl p-6 text-left shadow-sm">
+            <div class="star text-lg mb-2">★★★★★</div>
+            <p class="text-body-gray text-base mb-4">"The lead quality from IDX Home Search is excellent. These are people actively searching for homes, and they come directly to me. The price is a no-brainer for what you get."</p>
+            <p class="font-bold text-navy text-sm">— Jennifer R.</p>
+            <p class="text-xs text-body-gray">Coldwell Banker, CA</p>
+          </div>
+        </div>
+        <a href="#reviews" class="inline-block mt-8 text-accent font-bold hover:underline">SEE MORE REVIEWS ↓</a>
+      </div>
+    </section>
+
+    <!-- A Home Search Consumers Love -->
+    <section class="py-16 md:py-24 bg-alt-bg">
+      <div class="max-w-site mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl mb-12">A Home Search Consumers Love</h2>
+        <div class="grid md:grid-cols-3 gap-8 items-center max-w-5xl mx-auto">
+          <!-- Left features -->
+          <div class="space-y-8 text-left md:text-right">
+            <div>
+              <h3 class="text-xl mb-2">Be contacted from any listing</h3>
+              <p class="text-body-gray text-base">Every listing has your contact info. Buyers reach out to you — no matter whose listing it is.</p>
+            </div>
+            <div>
+              <h3 class="text-xl mb-2">Map &amp; Grid Views</h3>
+              <p class="text-body-gray text-base">Consumers can browse listings on an interactive map or in a clean grid layout.</p>
+            </div>
+          </div>
+          <!-- Center phone -->
+          <div class="flex justify-center">
+            <img src="assets/images/IDX-phones-browser.webp" alt="IDX search on Facebook browser" class="max-w-xs w-full drop-shadow-xl">
+          </div>
+          <!-- Right features -->
+          <div class="space-y-8 text-left">
+            <div>
+              <h3 class="text-xl mb-2">High-res listing photo galleries</h3>
+              <p class="text-body-gray text-base">Beautiful, full-screen photo galleries for every listing keep buyers engaged and exploring.</p>
+            </div>
+            <div>
+              <h3 class="text-xl mb-2">The most current info</h3>
+              <p class="text-body-gray text-base">Listings sync every 5 minutes with the MLS so buyers always see accurate, up-to-date data.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Facebook Integration & Promotion -->
+    <section class="py-16 md:py-24 bg-white">
+      <div class="max-w-site mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-3xl md:text-4xl mb-6">Facebook Integration &amp; Promotion</h2>
+            <p class="text-body-gray mb-4">
+              IDX Home Search installs as a pinned post on your Facebook Business Page. It's the first thing visitors see, giving your MLS search maximum visibility.
+            </p>
+            <p class="text-body-gray mb-6">
+              The pinned post is designed to grab attention and drive clicks. It promotes the home search to all your followers and anyone who visits your page.
+            </p>
+            <a href="#checkout-container" class="btn-cta">GET STARTED</a>
+          </div>
+          <div class="flex justify-center">
+            <img src="assets/images/IDX-facebook-post.webp" alt="IDX pinned post on Facebook" class="max-w-md w-full rounded-lg shadow-lg">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bonus Find a Home Tab -->
+    <section class="py-16 md:py-24 bg-alt-bg">
+      <div class="max-w-site mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="flex justify-center order-2 md:order-1">
+            <img src="assets/images/IDX-ipad-fb-search.webp" alt="Find a Home tab on iPad" class="max-w-lg w-full drop-shadow-xl">
+          </div>
+          <div class="order-1 md:order-2">
+            <h2 class="text-3xl md:text-4xl mb-6">Bonus: "Find a Home" Tab</h2>
+            <p class="text-body-gray mb-4">
+              For qualifying pages with 2,000+ likes, IDX Home Search also adds a dedicated "Find a Home" tab to your Facebook page's sidebar navigation.
+            </p>
+            <p class="text-body-gray mb-6">
+              This gives buyers a permanent, easy-to-find entry point to search the MLS directly from your page — making your Facebook presence a true real estate hub.
+            </p>
+            <a href="#checkout-container" class="btn-cta">CLAIM YOUR OFFER</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Website Integration -->
+    <section class="py-16 md:py-24 bg-white">
+      <div class="max-w-site mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-3xl md:text-4xl mb-6">Add An Exclusive MLS Search to Your Own Website</h2>
+            <p class="text-body-gray mb-4">
+              Your IDX Home Search subscription also includes a standalone web version. Embed the search on your personal website, blog, or anywhere you want with a simple link or iFrame.
+            </p>
+            <p class="text-body-gray mb-6">
+              You get a custom URL that you can share on social media, in email campaigns, or anywhere else you promote your business. Every lead goes directly to you.
+            </p>
+            <a href="#checkout-container" class="btn-cta">TRY IDX TODAY</a>
+          </div>
+          <div class="flex justify-center">
+            <img src="assets/images/IDX-website-integration.png" alt="IDX on your website" class="max-w-md w-full rounded-lg shadow-lg">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial Block -->
+    <section class="py-16 md:py-20 bg-navy-dark text-white">
+      <div class="max-w-site mx-auto px-4">
+        <div class="max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-8">
+          <img src="assets/images/testimonial-randy.jpg" alt="Randy S." class="w-24 h-24 rounded-full object-cover flex-shrink-0 border-4 border-white/20">
+          <div>
+            <p class="text-lg md:text-xl italic mb-4 text-white/90">
+              "I've tried other IDX tools and nothing comes close. The fact that it integrates with Facebook and I get my own website search too — it's an unbeatable deal. I've closed 3 transactions this year from IDX Home Search leads alone."
+            </p>
+            <p class="font-bold text-white">— Randy S.</p>
+            <p class="text-white/60 text-sm">RE/MAX Elite, Jacksonville, FL</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Checkout Section -->
+    <section class="py-16 md:py-24 bg-alt-bg" id="checkout-container">
+      <div class="max-w-site mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl text-center mb-12">Get Started Today</h2>
+        <div class="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+          <!-- Left: Order Details + Form -->
+          <div class="bg-white rounded-xl shadow-lg p-8">
+            <h3 class="text-2xl mb-2">Order Details</h3>
+            <p class="text-body-gray mb-6">IDX Home Search — <span id="mls-name-checkout" class="font-bold text-navy">Your MLS</span></p>
+            <div class="bg-gray-50 rounded-lg p-4 mb-6">
+              <div class="flex justify-between items-center mb-1">
+                <span class="text-body-gray">Annual Subscription</span>
+                <span class="text-gray-400 line-through">$149.00</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="font-bold text-navy">With code SPRINGIDX</span>
+                <span class="font-bold text-cta-green text-xl">$89.40</span>
+              </div>
+            </div>
+
+            <form id="checkout-form" data-ha-checkout data-price-id="price_IDX_annual" data-mode="subscription" data-success-url="/Directory/Services/IDX/Setup" data-meta-mls-id="">
+              <div class="grid grid-cols-2 gap-4 mb-4">
+                <div>
+                  <label class="block text-sm font-semibold text-gray-700 mb-1">First Name</label>
+                  <input name="first-name" type="text" required class="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-base focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent">
+                </div>
+                <div>
+                  <label class="block text-sm font-semibold text-gray-700 mb-1">Last Name</label>
+                  <input name="last-name" type="text" required class="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-base focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent">
+                </div>
+              </div>
+              <div class="mb-4">
+                <label class="block text-sm font-semibold text-gray-700 mb-1">Email</label>
+                <input name="email" type="email" required class="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-base focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent">
+              </div>
+              <div class="mb-6">
+                <label class="block text-sm font-semibold text-gray-700 mb-1">Coupon Code</label>
+                <input name="coupon-id" type="text" placeholder="e.g. SPRINGIDX" class="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-base focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent">
+              </div>
+              <button type="submit" class="btn-cta w-full text-center text-lg">Pay with Card</button>
+            </form>
+
+            <div class="mt-4 flex items-center justify-center gap-3">
+              <img src="assets/images/stripe-badge.svg" alt="Powered by Stripe" class="h-6">
+              <img src="assets/images/cc-icons.svg" alt="Visa, Mastercard, Amex" class="h-6">
+            </div>
+          </div>
+
+          <!-- Right: Company info + Guarantee -->
+          <div class="space-y-8">
+            <div class="bg-white rounded-xl shadow-lg p-8 text-center">
+              <img src="assets/images/guarantee.png" alt="Money-back guarantee" class="w-20 mx-auto mb-4">
+              <h3 class="text-xl mb-2">30-Day Money-Back Guarantee</h3>
+              <p class="text-body-gray text-base">Not satisfied? Cancel within 30 days for a full refund. No questions asked.</p>
+            </div>
+            <div class="bg-white rounded-xl shadow-lg p-8">
+              <img src="assets/images/homeasap-logo.png" alt="HomeASAP" class="h-10 mx-auto mb-4">
+              <div class="text-center text-body-gray text-base space-y-2">
+                <p><strong class="text-navy">Sales:</strong> <a href="tel:904-549-7616" class="text-accent hover:underline">904-549-7616</a></p>
+                <p><a href="mailto:sales@homeasap.com" class="text-accent hover:underline">sales@homeasap.com</a></p>
+                <p class="border-t border-gray-100 pt-2 mt-2"><strong class="text-navy">Support:</strong> <a href="tel:904-549-7600" class="text-accent hover:underline">904-549-7600</a></p>
+                <p><a href="mailto:cs@homeasap.com" class="text-accent hover:underline">cs@homeasap.com</a></p>
+                <p class="text-sm text-body-gray/70">Monday–Friday, 9AM–5PM EST</p>
+              </div>
+            </div>
+            <div class="flex justify-center">
+              <img src="assets/images/ssl-seal.webp" alt="SSL Secure" class="h-12">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 md:py-24 bg-white" id="faq">
+      <div class="max-w-site mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl text-center mb-12">Frequently Asked Questions</h2>
+        <div class="max-w-3xl mx-auto space-y-3">
+          <!-- FAQ 1 -->
+          <div class="faq-item border border-gray-200 rounded-lg overflow-hidden">
+            <button class="faq-toggle w-full text-left px-6 py-4 flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors">
+              <span class="font-bold text-navy text-base">What listings does the search show?</span>
+              <svg class="faq-chevron w-5 h-5 text-body-gray flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="px-6 py-4 text-body-gray text-base">All active MLS listings in your selected MLS area. Listings are updated every 5 minutes so buyers always see the most current and accurate inventory available.</div>
+            </div>
+          </div>
+          <!-- FAQ 2 -->
+          <div class="faq-item border border-gray-200 rounded-lg overflow-hidden">
+            <button class="faq-toggle w-full text-left px-6 py-4 flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors">
+              <span class="font-bold text-navy text-base">Where does the search appear?</span>
+              <svg class="faq-chevron w-5 h-5 text-body-gray flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="px-6 py-4 text-body-gray text-base">The search appears as a pinned post on your Facebook Business Page — it's the first thing visitors see. For pages with 2,000+ likes, it also appears as a dedicated "Find a Home" tab in your page's sidebar navigation.</div>
+            </div>
+          </div>
+          <!-- FAQ 3 -->
+          <div class="faq-item border border-gray-200 rounded-lg overflow-hidden">
+            <button class="faq-toggle w-full text-left px-6 py-4 flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors">
+              <span class="font-bold text-navy text-base">How will buyers contact me?</span>
+              <svg class="faq-chevron w-5 h-5 text-body-gray flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="px-6 py-4 text-body-gray text-base">Contact buttons are placed throughout the search experience. When a buyer clicks to inquire about a listing, you receive an instant email notification with their name, email, phone number, and the listing they're interested in.</div>
+            </div>
+          </div>
+          <!-- FAQ 4 -->
+          <div class="faq-item border border-gray-200 rounded-lg overflow-hidden">
+            <button class="faq-toggle w-full text-left px-6 py-4 flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors">
+              <span class="font-bold text-navy text-base">Does the search also work as a standalone website?</span>
+              <svg class="faq-chevron w-5 h-5 text-body-gray flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="px-6 py-4 text-body-gray text-base">Yes! Your subscription includes a customizable standalone web version with its own URL. You can embed it on your website, share it on social media, or use it in email campaigns. Every lead still goes directly to you.</div>
+            </div>
+          </div>
+          <!-- FAQ 5 -->
+          <div class="faq-item border border-gray-200 rounded-lg overflow-hidden">
+            <button class="faq-toggle w-full text-left px-6 py-4 flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors">
+              <span class="font-bold text-navy text-base">Can one subscription be used on multiple Facebook pages?</span>
+              <svg class="faq-chevron w-5 h-5 text-body-gray flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="px-6 py-4 text-body-gray text-base">Yes! One subscription can be used on multiple Facebook Business Pages that you own or manage. There's no extra charge for additional pages.</div>
+            </div>
+          </div>
+          <!-- FAQ 6 -->
+          <div class="faq-item border border-gray-200 rounded-lg overflow-hidden">
+            <button class="faq-toggle w-full text-left px-6 py-4 flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors">
+              <span class="font-bold text-navy text-base">Do I need my own listings to use IDX Home Search?</span>
+              <svg class="faq-chevron w-5 h-5 text-body-gray flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-answer">
+              <div class="px-6 py-4 text-body-gray text-base">Nope! You become the featured agent for all MLS listings in the search — not just your own. You don't need any active listings to start capturing leads from the entire MLS.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="py-16 md:py-24 bg-alt-bg" id="contact">
+      <div class="max-w-site mx-auto px-4">
+        <div class="max-w-xl mx-auto">
+          <h2 class="text-3xl md:text-4xl text-center mb-4">Have Questions?</h2>
+          <p class="text-body-gray text-center mb-8">Send us a message and we'll get back to you within 24 hours.</p>
+          <form id="contact-form" class="bg-white rounded-xl shadow-lg p-8 space-y-4">
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">Name</label>
+                <input type="text" required class="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-base focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent">
+              </div>
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-1">Email</label>
+                <input type="email" required class="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-base focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent">
+              </div>
+            </div>
+            <div>
+              <label class="block text-sm font-semibold text-gray-700 mb-1">Message</label>
+              <textarea rows="4" required class="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-base focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent resize-none"></textarea>
+            </div>
+            <!-- reCAPTCHA placeholder -->
+            <div class="bg-gray-100 border border-gray-300 rounded-lg p-4 text-center text-sm text-body-gray">
+              <p>🔒 reCAPTCHA verification</p>
+            </div>
+            <button type="submit" class="btn-cta w-full text-center">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Full Reviews Section -->
+    <section class="py-16 md:py-24 bg-white" id="reviews">
+      <div class="max-w-site mx-auto px-4">
+        <h2 class="text-3xl md:text-4xl text-center mb-12">Customer Reviews</h2>
+        <div id="reviews-list" class="max-w-3xl mx-auto space-y-6">
+          <!-- Review 1 -->
+          <div class="review-item bg-gray-50 rounded-xl p-6 shadow-sm">
+            <div class="flex items-center justify-between mb-2">
+              <span class="star">★★★★★</span>
+              <span class="text-xs text-body-gray">March 2025</span>
+            </div>
+            <p class="text-body-gray text-base mb-3">"IDX Home Search has been a game-changer for my Facebook page. I've gotten more leads in the last month than I did all of last quarter. The setup was incredibly easy and the support team walked me through everything."</p>
+            <p class="font-bold text-navy text-sm">— Sarah M., Keller Williams, FL</p>
+          </div>
+          <!-- Review 2 -->
+          <div class="review-item bg-gray-50 rounded-xl p-6 shadow-sm">
+            <div class="flex items-center justify-between mb-2">
+              <span class="star">★★★★★</span>
+              <span class="text-xs text-body-gray">February 2025</span>
+            </div>
+            <p class="text-body-gray text-base mb-3">"I love that buyers can search the entire MLS right from my Facebook page. It makes me the go-to agent for anyone browsing in my area. Best investment I've made this year."</p>
+            <p class="font-bold text-navy text-sm">— Mike T., RE/MAX, TX</p>
+          </div>
+          <!-- Review 3 -->
+          <div class="review-item bg-gray-50 rounded-xl p-6 shadow-sm">
+            <div class="flex items-center justify-between mb-2">
+              <span class="star">★★★★★</span>
+              <span class="text-xs text-body-gray">February 2025</span>
+            </div>
+            <p class="text-body-gray text-base mb-3">"The lead quality from IDX Home Search is excellent. These are people actively searching for homes, and they come directly to me. The price is a no-brainer for what you get."</p>
+            <p class="font-bold text-navy text-sm">— Jennifer R., Coldwell Banker, CA</p>
+          </div>
+          <!-- Review 4 (hidden initially) -->
+          <div class="review-item bg-gray-50 rounded-xl p-6 shadow-sm hidden extra-review">
+            <div class="flex items-center justify-between mb-2">
+              <span class="star">★★★★★</span>
+              <span class="text-xs text-body-gray">January 2025</span>
+            </div>
+            <p class="text-body-gray text-base mb-3">"As a new agent, IDX Home Search gave me instant credibility. Having the entire MLS on my Facebook page makes it look like I have hundreds of listings. My clients are impressed."</p>
+            <p class="font-bold text-navy text-sm">— David K., Century 21, NC</p>
+          </div>
+          <!-- Review 5 -->
+          <div class="review-item bg-gray-50 rounded-xl p-6 shadow-sm hidden extra-review">
+            <div class="flex items-center justify-between mb-2">
+              <span class="star">★★★★★</span>
+              <span class="text-xs text-body-gray">January 2025</span>
+            </div>
+            <p class="text-body-gray text-base mb-3">"I've been using IDX Home Search for over a year now and it consistently delivers leads. The Facebook integration is seamless and the web search is a great bonus. Highly recommend."</p>
+            <p class="font-bold text-navy text-sm">— Lisa P., eXp Realty, AZ</p>
+          </div>
+          <!-- Review 6 -->
+          <div class="review-item bg-gray-50 rounded-xl p-6 shadow-sm hidden extra-review">
+            <div class="flex items-center justify-between mb-2">
+              <span class="star">★★★★☆</span>
+              <span class="text-xs text-body-gray">December 2024</span>
+            </div>
+            <p class="text-body-gray text-base mb-3">"Great tool for lead generation. The only reason I give 4 stars instead of 5 is I wish the search had a few more filter options. But for the price, it's an incredible value."</p>
+            <p class="font-bold text-navy text-sm">— Robert H., Compass, NY</p>
+          </div>
+          <!-- Review 7 -->
+          <div class="review-item bg-gray-50 rounded-xl p-6 shadow-sm hidden extra-review">
+            <div class="flex items-center justify-between mb-2">
+              <span class="star">★★★★★</span>
+              <span class="text-xs text-body-gray">December 2024</span>
+            </div>
+            <p class="text-body-gray text-base mb-3">"The customer service alone is worth the subscription. Every time I've had a question, they've responded within hours. The product itself is fantastic — I've closed two deals from Facebook leads this quarter."</p>
+            <p class="font-bold text-navy text-sm">— Amanda G., Berkshire Hathaway, GA</p>
+          </div>
+          <!-- Review 8 -->
+          <div class="review-item bg-gray-50 rounded-xl p-6 shadow-sm hidden extra-review">
+            <div class="flex items-center justify-between mb-2">
+              <span class="star">★★★★★</span>
+              <span class="text-xs text-body-gray">November 2024</span>
+            </div>
+            <p class="text-body-gray text-base mb-3">"I was skeptical at first, but IDX Home Search delivered. Within the first week, I had three new buyer leads from my Facebook page. The setup took less than 10 minutes."</p>
+            <p class="font-bold text-navy text-sm">— Chris W., Redfin, WA</p>
+          </div>
+          <!-- Review 9 -->
+          <div class="review-item bg-gray-50 rounded-xl p-6 shadow-sm hidden extra-review">
+            <div class="flex items-center justify-between mb-2">
+              <span class="star">★★★★★</span>
+              <span class="text-xs text-body-gray">November 2024</span>
+            </div>
+            <p class="text-body-gray text-base mb-3">"My team uses IDX Home Search on 4 different Facebook pages — all on one subscription. The ROI is incredible. We've generated dozens of leads and it basically runs itself."</p>
+            <p class="font-bold text-navy text-sm">— Patricia N., HomeSmart, CO</p>
+          </div>
+          <!-- Review 10 -->
+          <div class="review-item bg-gray-50 rounded-xl p-6 shadow-sm hidden extra-review">
+            <div class="flex items-center justify-between mb-2">
+              <span class="star">★★★★★</span>
+              <span class="text-xs text-body-gray">October 2024</span>
+            </div>
+            <p class="text-body-gray text-base mb-3">"As a broker, I recommended IDX Home Search to my entire office. It's affordable, effective, and gives every agent an edge on Facebook. Some of my agents have gotten their first leads within days."</p>
+            <p class="font-bold text-navy text-sm">— Thomas B., Weichert Realtors, NJ</p>
+          </div>
+          <!-- Review 11 -->
+          <div class="review-item bg-gray-50 rounded-xl p-6 shadow-sm hidden extra-review">
+            <div class="flex items-center justify-between mb-2">
+              <span class="star">★★★★★</span>
+              <span class="text-xs text-body-gray">October 2024</span>
+            </div>
+            <p class="text-body-gray text-base mb-3">"I love the standalone website feature. I use it in my email signature and on business cards. It's like having my own real estate portal for less than $90 a year."</p>
+            <p class="font-bold text-navy text-sm">— Maria L., EXIT Realty, IL</p>
+          </div>
+          <!-- Review 12 -->
+          <div class="review-item bg-gray-50 rounded-xl p-6 shadow-sm hidden extra-review">
+            <div class="flex items-center justify-between mb-2">
+              <span class="star">★★★★★</span>
+              <span class="text-xs text-body-gray">September 2024</span>
+            </div>
+            <p class="text-body-gray text-base mb-3">"This is the easiest lead generation tool I've ever used. Install it once, and it works 24/7 bringing potential buyers right to your inbox. Can't beat it for the price."</p>
+            <p class="font-bold text-navy text-sm">— Kevin D., Independent, OH</p>
+          </div>
+        </div>
+        <div class="text-center mt-8">
+          <button id="load-more-reviews" class="btn-cta !bg-accent hover:!bg-blue-700">Load More Reviews</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-navy-dark text-white py-10">
+    <div class="max-w-site mx-auto px-4">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-4">
+          <a href="https://www.facebook.com/HomeASAP" target="_blank" rel="noopener" class="text-white/60 hover:text-white transition-colors" aria-label="Facebook">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+          </a>
+          <a href="https://twitter.com/HomeASAP" target="_blank" rel="noopener" class="text-white/60 hover:text-white transition-colors" aria-label="Twitter">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/homeasap/" target="_blank" rel="noopener" class="text-white/60 hover:text-white transition-colors" aria-label="Instagram">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+        </div>
+        <div class="text-center md:text-right text-white/60 text-sm">
+          <p>&copy; <span id="footer-year"></span> HomeASAP, Inc. All rights reserved.</p>
+          <div class="flex items-center justify-center md:justify-end gap-4 mt-1">
+            <a href="https://www.homeasap.com/Privacy" class="hover:text-white transition-colors">Privacy Policy</a>
+            <span>|</span>
+            <a href="https://www.homeasap.com/Terms" class="hover:text-white transition-colors">Terms of Service</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Stripe + External Checkout -->
+  <script src="https://js.stripe.com/v3/"></script>
+  <script src="https://custom-scripts.homeasapcontent.com/external-checkout.js"></script>
+
+  <script>
+    // ===== Configuration =====
+    const isTest = /test|dev/i.test(window.location.href);
+    const API_BASE = isTest
+      ? 'https://api.testhomeasap.com/NPlay.Services.NPlayApi/api'
+      : 'https://api.homeasap.com/NPlay.Services.NPlayApi/api';
+
+    // ===== State Dropdown Data =====
+    const STATES = [
+      ['AL','Alabama'],['AK','Alaska'],['AB','Alberta'],['AZ','Arizona'],['AR','Arkansas'],
+      ['CA','California'],['CO','Colorado'],['CT','Connecticut'],['DE','Delaware'],
+      ['DC','District Of Columbia'],['FL','Florida'],['GA','Georgia'],['HI','Hawaii'],
+      ['ID','Idaho'],['IL','Illinois'],['IN','Indiana'],['IA','Iowa'],['KS','Kansas'],
+      ['KY','Kentucky'],['LA','Louisiana'],['ME','Maine'],['MD','Maryland'],
+      ['MA','Massachusetts'],['MI','Michigan'],['MN','Minnesota'],['MS','Mississippi'],
+      ['MO','Missouri'],['MT','Montana'],['NE','Nebraska'],['NV','Nevada'],
+      ['NH','New Hampshire'],['NJ','New Jersey'],['NM','New Mexico'],['NY','New York'],
+      ['NC','North Carolina'],['ND','North Dakota'],['OH','Ohio'],['OK','Oklahoma'],
+      ['ON','Ontario'],['OR','Oregon'],['PA','Pennsylvania'],['RI','Rhode Island'],
+      ['SC','South Carolina'],['SD','South Dakota'],['TN','Tennessee'],['TX','Texas'],
+      ['UT','Utah'],['VT','Vermont'],['VA','Virginia'],['WA','Washington'],
+      ['WV','West Virginia'],['WI','Wisconsin'],['WY','Wyoming']
+    ];
+
+    // ===== DOM References =====
+    const viewChecker = document.getElementById('view-checker');
+    const viewProduct = document.getElementById('view-product');
+    const stateSelect = document.getElementById('state-select');
+    const mlsSelectWrapper = document.getElementById('mls-select-wrapper');
+    const mlsSelect = document.getElementById('mls-select');
+    const mlsLoading = document.getElementById('mls-loading');
+    const mlsError = document.getElementById('mls-error');
+    const checkBtn = document.getElementById('check-btn');
+    const mlsNameBanner = document.getElementById('mls-name-banner');
+    const mlsNameCheckout = document.getElementById('mls-name-checkout');
+    const checkoutForm = document.getElementById('checkout-form');
+    const changeMlsBtn = document.getElementById('change-mls-btn');
+
+    // ===== Populate State Dropdown =====
+    STATES.forEach(([code, name]) => {
+      const opt = document.createElement('option');
+      opt.value = code;
+      opt.textContent = name;
+      stateSelect.appendChild(opt);
+    });
+
+    // ===== State Change → Fetch MLS List =====
+    stateSelect.addEventListener('change', async () => {
+      const stateCode = stateSelect.value;
+      mlsSelect.innerHTML = '<option value="">Select Your MLS</option>';
+      mlsError.classList.add('hidden');
+      mlsError.textContent = '';
+
+      if (!stateCode) {
+        mlsSelectWrapper.classList.add('hidden');
+        checkBtn.disabled = true;
+        return;
+      }
+
+      mlsLoading.classList.remove('hidden');
+      mlsSelectWrapper.classList.add('hidden');
+
+      try {
+        const res = await fetch(`${API_BASE}/mls/state/${stateCode}`);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+
+        const liveMls = data
+          .filter(m => m.Status === 'Live' || m.status === 'Live')
+          .sort((a, b) => (a.Name || a.name || '').localeCompare(b.Name || b.name || ''));
+
+        if (liveMls.length === 0) {
+          mlsError.textContent = 'No active MLS options found for this state. Please try another.';
+          mlsError.classList.remove('hidden');
+          checkBtn.disabled = true;
+        } else {
+          liveMls.forEach(m => {
+            const opt = document.createElement('option');
+            opt.value = m.Id || m.id;
+            opt.textContent = m.Name || m.name;
+            mlsSelect.appendChild(opt);
+          });
+          mlsSelectWrapper.classList.remove('hidden');
+        }
+      } catch (err) {
+        mlsError.textContent = 'Unable to load MLS options. Please try again.';
+        mlsError.classList.remove('hidden');
+        console.error('MLS fetch error:', err);
+      } finally {
+        mlsLoading.classList.add('hidden');
+      }
+    });
+
+    // ===== MLS Select Change =====
+    mlsSelect.addEventListener('change', () => {
+      checkBtn.disabled = !mlsSelect.value;
+    });
+
+    // ===== Check Availability → Transition to View 2 =====
+    checkBtn.addEventListener('click', () => {
+      const mlsId = mlsSelect.value;
+      if (!mlsId) return;
+
+      const mlsName = mlsSelect.options[mlsSelect.selectedIndex].textContent;
+      history.pushState({ mlsid: mlsId }, '', `?mlsid=${mlsId}`);
+      showProductView(mlsId, mlsName);
+    });
+
+    // ===== Change MLS Button =====
+    changeMlsBtn.addEventListener('click', () => {
+      history.pushState({}, '', window.location.pathname);
+      showCheckerView();
+    });
+
+    // ===== View Switching =====
+    function showCheckerView() {
+      viewChecker.classList.remove('hidden');
+      viewChecker.classList.add('view-transition');
+      viewProduct.classList.add('hidden');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function showProductView(mlsId, mlsName) {
+      viewChecker.classList.add('hidden');
+      viewProduct.classList.remove('hidden');
+      viewProduct.classList.add('view-transition');
+
+      // Populate MLS name everywhere
+      mlsNameBanner.textContent = mlsName;
+      mlsNameCheckout.textContent = mlsName;
+
+      // Set checkout form metadata
+      checkoutForm.setAttribute('data-meta-mls-id', mlsId);
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // ===== Initial Route Check =====
+    async function initRoute() {
+      const params = new URLSearchParams(window.location.search);
+      const mlsId = params.get('mlsid');
+
+      if (mlsId) {
+        // Direct link to product page — fetch MLS name
+        try {
+          const res = await fetch(`${API_BASE}/mls/${mlsId}`);
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          const data = await res.json();
+          showProductView(mlsId, data.Name || data.name || mlsId);
+        } catch (err) {
+          console.error('MLS lookup error:', err);
+          // Still show product view with ID as fallback
+          showProductView(mlsId, mlsId);
+        }
+      } else {
+        showCheckerView();
+      }
+    }
+
+    // ===== Handle Browser Back/Forward =====
+    window.addEventListener('popstate', () => {
+      const params = new URLSearchParams(window.location.search);
+      const mlsId = params.get('mlsid');
+      if (mlsId) {
+        initRoute();
+      } else {
+        showCheckerView();
+      }
+    });
+
+    // ===== FAQ Accordion =====
+    document.querySelectorAll('.faq-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const wasOpen = item.classList.contains('open');
+        // Close all
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        // Toggle clicked
+        if (!wasOpen) item.classList.add('open');
+      });
+    });
+
+    // ===== Load More Reviews =====
+    document.getElementById('load-more-reviews').addEventListener('click', function() {
+      document.querySelectorAll('.extra-review').forEach(r => r.classList.remove('hidden'));
+      this.style.display = 'none';
+    });
+
+    // ===== Mobile Menu =====
+    document.getElementById('hamburger-btn').addEventListener('click', () => {
+      const menu = document.getElementById('mobile-menu');
+      if (menu.classList.contains('max-h-0')) {
+        menu.classList.remove('max-h-0', 'opacity-0');
+        menu.classList.add('max-h-96', 'opacity-100');
+      } else {
+        menu.classList.add('max-h-0', 'opacity-0');
+        menu.classList.remove('max-h-96', 'opacity-100');
+      }
+    });
+
+    // Close mobile menu on link click
+    document.querySelectorAll('#mobile-menu a').forEach(a => {
+      a.addEventListener('click', () => {
+        const menu = document.getElementById('mobile-menu');
+        menu.classList.add('max-h-0', 'opacity-0');
+        menu.classList.remove('max-h-96', 'opacity-100');
+      });
+    });
+
+    // ===== Smooth Scroll for Anchor Links =====
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', (e) => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // ===== Dynamic Footer Year =====
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+
+    // ===== Contact Form (placeholder handler) =====
+    document.getElementById('contact-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Thank you! Your message has been sent. We\'ll respond within 24 hours.');
+      e.target.reset();
+    });
+
+    // ===== Initialize =====
+    initRoute();
+  </script>
+</body>
+</html>
